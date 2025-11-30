@@ -100,3 +100,5 @@ Attendance (Manager)
 
 📸 Screenshots
 Working screenshots are uploaded in a separete folder and .csv file contains employees data exported from application.
+
+🔗 Live Demo: https://attendance-frontend-rose-beta.vercel.app/
