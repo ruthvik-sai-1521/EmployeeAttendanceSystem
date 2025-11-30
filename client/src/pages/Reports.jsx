@@ -18,7 +18,7 @@ const Reports = () => {
     setLoading(true);
     try {
       const config = { headers: { Authorization: `Bearer ${user.token}` } };
-      const res = await axios.post('http://localhost:5000/api/attendance/report', filters, config);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/attendance/report`, filters, config);
       setReportData(res.data);
     } catch (error) {
       alert('Error fetching report');

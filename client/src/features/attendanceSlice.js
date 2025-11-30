@@ -6,7 +6,7 @@ const getToken = () => {
   return user?.token;
 };
 
-const API_URL = 'http://localhost:5000/api/attendance/';
+const API_URL = `${import.meta.env.VITE_API_URL}/api/attendance/`;
 
 // Actions
 export const checkIn = createAsyncThunk('attendance/checkIn', async (_, thunkAPI) => {

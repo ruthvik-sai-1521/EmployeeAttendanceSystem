@@ -13,7 +13,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow your React Frontend
+  origin: '*', 
   credentials: true
 })); // Allows frontend to talk to backend
 app.use(express.json()); // Allows us to parse JSON bodies
@@ -22,5 +22,13 @@ app.use(express.json()); // Allows us to parse JSON bodies
 app.use('/api/auth', authRoutes);
 app.use('/api/attendance', attendanceRoutes);
 
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
+
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
+module.exports = app;
