@@ -10,6 +10,7 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user, isLoading, isError, message } = useSelector((state) => state.auth);
+  console.log("DEBUG: API URL is:", import.meta.env.VITE_API_URL);
 
   useEffect(() => {
     if (isError) alert(message);
