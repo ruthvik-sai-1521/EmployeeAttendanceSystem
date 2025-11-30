@@ -1,0 +1,5 @@
+Date,Employee,ID,Department,Status,In,Out,Hours
+2025-11-29,John Employee,EMP001,IT,late,10:17 PM,10:17 PM,0
+2025-11-30,John Employee,EMP001,IT,late,11:33 AM,-,0
+2025-11-30,Ruthvik Thalapaneni,EMP174,Marketing,late,11:48 AM,-,0
+2025-11-30,Balu,EMP172,HR,late,12:03 PM,-,0
